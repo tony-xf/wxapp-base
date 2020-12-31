@@ -1,0 +1,60 @@
+@import '../../common/styles/hairline.scss';
+.pay-list {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    .content {
+        pointer-events:auto;
+        position: relative;
+        width: 80%;
+        background: #fff;
+        .footer,
+        .header {
+            font-size: 28rpx;
+            line-height: 100rpx;
+            text-align: center;
+            color: #212121;
+        }
+        .main {
+            .list {
+                .payment-li {
+                    margin-left: 40rpx;
+                    display: flex;
+                    align-items: center;
+                    padding: 10rpx 40rpx 10rpx 0; 
+                    .channel_logo {
+                        width: 90rpx;
+                        height: 90rpx;
+                        //border: 1rpx solid #999;
+                        border-radius: 6rpx;
+                        image {
+                            display: block;
+                            margin: 15rpx auto 0;
+                            width: 60rpx;
+                            height: 60rpx;
+                        }
+                    }
+                    .channel-name {
+                        margin: 0 10rpx;
+                        flex: 1;
+                        // font-size: 24rpx;
+                        // line-height: 1;
+                        // flex: 1;
+                        // margin: 0 10rpx;
+                    }
+                }
+            }
+        }
+        .footer {
+            background: rgb(34,142,27);
+            color: #fff;
+        }
+    }
+}

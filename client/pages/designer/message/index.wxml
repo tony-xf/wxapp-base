@@ -1,0 +1,30 @@
+<view class="message-page">
+    <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="handleScroll"  wx:if="{{total > 0}}">
+        <view class="message-list">
+            <block wx:for="{{list}}" wx:key="index">
+                <van-swipe-cell right-width="{{ 65 }}">
+                    <view class="message-item">
+                        <view class="title-bar">
+                            <text class="title">{{item.title}}</text>
+                            <text class="time">{{item.createAt}}</text>
+                        </view>
+                        <view class="content">{{item.content}}</view>
+                        <view class="btn-bar">
+                            <view wx:if="{{item.type === 1}}" class="btn red-btn" bindtap="toComment">查看</view>
+                            <view wx:if="{{item.type === 3}}" data-id="{{item.resourcesId}}" class="btn red-btn" bindtap="toOrder">查看</view>
+                        </view>
+                    </view>
+                    <view class="del-btn" data-id="{{item.id}}" data-title="{{item.title}}" catchtap="delMessage" slot="right">删除</view>
+                </van-swipe-cell>
+            </block>
+        </view>
+        <view class="loadStatus" wx:if="{{finished}}">
+            <view class="noMore">没有更多消息了</view>
+        </view>
+    </scroll-view>
+    <view class="no-res" wx:if="{{total < 1}}">
+        <image src="{{icon}}"></image>
+        <view>暂时没有消息</view>
+    </view>
+    <dialog id="dialog" showCancel="true"></dialog>
+</view>

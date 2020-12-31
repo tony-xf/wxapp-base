@@ -1,0 +1,9 @@
+<view class="entry-page">
+    <view class="main">
+        <image src="{{icon}}"></image>
+        <view>抱歉，您还未拥有设计师账号</view>
+    </view>
+    <view class="btn-group">
+        <view class="submit" catchtap="toApply">前往申请</view>
+    </view>
+</view>

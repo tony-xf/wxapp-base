@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "定制单",
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "goods-item":"../components/goods-item/index",
+    "filter-view":"../../../../components/filter-view/index"
+  }
+}

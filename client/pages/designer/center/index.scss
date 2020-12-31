@@ -1,0 +1,80 @@
+page{
+    background: #eee;
+}
+.entry-page{
+    font-size: 28rpx;
+    .red{
+        color: #E7504A!important;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 360rpx;
+        padding: 0 28rpx;
+        margin-bottom: 28rpx;
+        overflow: hidden;
+        .avatar-bar{
+            display: flex;
+            align-items:center;
+            font-size: 36rpx;
+            color: #fff;
+            margin: 36rpx 0;
+            image{
+                width: 140rpx;
+                height: 140rpx;
+                margin-right: 20rpx;
+                border-radius: 50%
+            }
+        }
+        .num-bar{
+            display: flex;
+            background: #fff;
+            font-size: 28rpx;
+            padding: 28rpx 0;
+            border-radius: 12rpx;
+            .item{
+                display:flex;
+                flex-direction: column;
+                flex: 1;
+                border-left: 1px solid #eee;
+                text-align: center;
+                &:first-child{
+                    border: none;
+                }
+                .num{
+                    font-size: 40rpx;
+                }
+            }
+        }
+    }
+    .contain{
+        padding: 0 28rpx ;
+        swiper{
+            margin-bottom: 28rpx;
+        }
+        .ad{
+            width: 690rpx;
+            height: 300rpx;
+            border-radius: 12rpx;
+        }
+        .icon-group{
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 12rpx;
+            background: #fff;
+            padding: 18rpx 0;
+            .item{
+                width: 25%;
+                text-align: center;
+                font-size: 24rpx;
+                margin: 18rpx 0;
+                image{
+                    width: 94rpx;
+                    height: 94rpx;
+                    margin-bottom: 16rpx;
+                }
+            }
+        }
+    }
+}

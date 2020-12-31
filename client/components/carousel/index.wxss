@@ -1,0 +1,28 @@
+.m-carousel {
+  position: relative; }
+
+.m-carousel swiper {
+  width: 100%; }
+
+.m-carousel swiper video {
+  width: 100%;
+  height: 100%; }
+
+.m-carousel swiper image {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.m-carousel swiper-item {
+  position: relative; }
+
+.m-carousel .indicatorWrap {
+  position: absolute;
+  height: 12rpx;
+  right: 30rpx;
+  bottom: 16rpx; }
+
+.m-carousel-2 swiper .inner {
+  position: relative;
+  width: 750rpx;
+  height: 350rpx; }

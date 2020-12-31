@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "评价列表",
+  "usingComponents": {
+    "dialog": "../../../../components/dialog/index"
+  }
+}

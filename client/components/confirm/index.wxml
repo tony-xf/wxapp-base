@@ -1,0 +1,14 @@
+<view class="confirm-modal" style="display: {{visible ? '' : 'none'}}">
+  <view class="confirm-dialog">
+    <view class="dialog-top">{{title}}</view>
+    <view class="dialog-content">
+      {{content}}
+    </view>
+    <view class="dialog-bottom">
+      <view class="left-button" catchtap="add" wx:if="{{addVisible}}">{{addText}}</view>
+      <view class="left-button" catchtap="cancel" data-type="cancel">{{cancelTxt}}</view>
+      <view class="right-button" catchtap="confirm">{{confirmText}}</view>
+    </view>
+    <view class="close-button" catchtap="cancel" data-type="close">×</view>
+  </view>
+</view>

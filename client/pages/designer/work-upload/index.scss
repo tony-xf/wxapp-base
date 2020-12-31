@@ -1,0 +1,66 @@
+.apply-page{
+    font-size: 28rpx;
+    .red{
+        color: #E7504A!important;
+    }
+    .field{
+        display: flex;
+        border-bottom: 1px solid #eee;
+        padding: 18rpx 0;
+        .label{
+            padding-left: 20rpx;
+            width: 186rpx;
+            text-align: right;
+            flex-shrink: 0;
+            .red{
+                margin-right: 6rpx;
+            }
+        }
+        .cont{
+            padding: 0 30rpx;
+            flex-grow: 1;
+            .tips{
+                margin-bottom: 18rpx;
+            }
+            input{
+                width: 100%;
+            }
+        }
+    }
+    .select-field{
+        .cont{
+            display: flex;
+            justify-content: space-between;
+        }
+        .placeholder{
+            color: #787878;
+        }
+    }
+    .btn-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .submit{
+            display: flex;
+            width: 540rpx;
+            height: 80rpx;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background-color: #C9B582;
+            box-sizing: border-box;
+            border-color: #C9B582;
+            border-radius: 80rpx;
+            margin: 56rpx auto 30rpx;
+        }
+        .cancel{
+            width: 540rpx;
+            text-align: center;
+            margin: auto;
+            color: #C9B582;
+        }
+    }
+    textarea{
+        width:100%;
+    }
+}

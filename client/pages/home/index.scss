@@ -1,0 +1,100 @@
+@import '../../common/styles/index.scss';
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchbar {
+    padding: 12rpx 32rpx;
+    .container {
+        background:rgba(238,238,238,1);
+        border-radius:4rpx;
+        .content {
+            height: 64rpx;
+            color: #999;
+            .search-icon {
+                margin: 0 21rpx 0 20rpx;
+                width: 40rpx;
+                height: 40rpx;
+                background-repeat: no-repeat;
+                background-position: -67rpx -9rpx;
+                background-size: 308rpx 98rpx;
+            }
+        }
+    }
+}
+.container {
+    // background:#f5f5f5;
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+    .content {
+        // margin-top:20rpx;
+        .item {
+            margin-top:20rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            image {
+                width:100%;
+                // height:456rpx;
+            }
+        }
+        .btn {
+            // width:750rpx;
+            // height:80rpx;
+            color:#fff;
+            text-align: center;
+            line-height: 160rpx;
+            font-size:24rpx;
+            // margin:40rpx;
+        }
+        .f3-item {
+            width:250rpx;
+            height: 288rpx;
+            display: inline-block;
+        }
+        .box-list {
+            .box {
+                display: flex;
+                padding:60rpx 35rpx 0;
+                &:last-child {
+                    padding-bottom:60rpx;
+                }
+                .box-left {flex:1}
+                .box-right {
+                    flex:1;display: flex;flex-direction: column;justify-content: center;align-items: center;
+                    .name {}
+                    .desc {font-size:28rpx}
+                    .money {
+                        .num {
+                            font-size:36rpx;
+                            font-weight: bold;
+                        }
+                    }
+                    .box-btn {
+                        width: 180rpx;
+                        height:56rpx;
+                        line-height: 56rpx;
+                        background:#333;
+                        color:#fff;
+                        text-align: center;
+                    }
+                    
+                }
+            }
+        }
+        .service {
+            button {
+                width:400rpx;
+                height:80rpx;
+                background:#d0ab72;
+                color:#fff;
+                font-size:24rpx;
+                margin:80rpx auto;
+                line-height:80rpx;
+            }
+        }
+    }
+}

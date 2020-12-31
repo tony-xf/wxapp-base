@@ -1,0 +1,44 @@
+.setting {
+  display: flex;
+  padding: 32rpx;
+  flex-direction: column; }
+
+.title {
+  margin-top: 32rpx;
+  font-size: 32rpx; }
+
+.tips {
+  margin-top: 32rpx;
+  font-size: 28rpx; }
+
+.text-app-info {
+  width: 700rpx;
+  margin-top: 32rpx;
+  font-size: 28rpx;
+  background: aliceblue;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+  word-break: break-all; }
+
+.radio-group-env {
+  margin-top: 32rpx;
+  display: flex;
+  flex-direction: column; }
+
+.radio-env {
+  font-size: 28rpx;
+  margin-top: 8rpx; }
+
+.button {
+  margin-top: 32rpx;
+  font-size: 28rpx;
+  width: 700rpx; }
+
+.input-h5 {
+  margin-top: 32rpx;
+  width: 700rpx;
+  font-size: 28rpx;
+  background: aliceblue; }
+
+textarea {
+  background: #fff; }

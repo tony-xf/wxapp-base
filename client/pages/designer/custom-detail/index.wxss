@@ -1,0 +1,49 @@
+page {
+  background: #eee; }
+
+.custom-detail-page {
+  font-size: 28rpx; }
+  .custom-detail-page .block {
+    background: #fff;
+    margin-bottom: 20rpx; }
+    .custom-detail-page .block .line {
+      display: flex;
+      padding: 30rpx 38rpx;
+      border-top: 1px solid #eee; }
+      .custom-detail-page .block .line .label {
+        color: #999;
+        margin-right: 20rpx;
+        flex-shrink: 0; }
+      .custom-detail-page .block .line .cont {
+        color: #101010; }
+    .custom-detail-page .block .title {
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      color: #101010; }
+    .custom-detail-page .block .drop-down {
+      padding-left: 50rpx; }
+      .custom-detail-page .block .drop-down .line:first-child {
+        border: none; }
+      .custom-detail-page .block .drop-down .line {
+        padding: 30rpx 0; }
+  .custom-detail-page .group {
+    background: #fff;
+    padding: 16rpx 0;
+    margin-bottom: 20rpx; }
+    .custom-detail-page .group .title {
+      margin-bottom: 20rpx; }
+    .custom-detail-page .group .item {
+      display: flex;
+      padding: 10rpx 38rpx;
+      justify-content: space-between;
+      align-items: center; }
+      .custom-detail-page .group .item .label {
+        color: #333;
+        margin-right: 20rpx;
+        flex-shrink: 0; }
+      .custom-detail-page .group .item .cont {
+        display: flex;
+        color: #999;
+        align-items: center; }
+      .custom-detail-page .group .item van-icon {
+        margin-left: 12rpx; }

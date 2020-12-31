@@ -1,0 +1,71 @@
+<view class="container" hover-class="none" hover-stop-propagation="false" wx:if="{{inited}}">
+    <view class="header">
+        <view class="logo">
+           <xcx-image src="/images/logo.png" width="{{240}}" height="{{80}}"></xcx-image>
+        </view>
+    </view>
+    <view class="content">
+         <carousel wx:if="{{F1.length}}" list="{{F1}}" autoplay="{{true}}" height="{{400}}" bind:tapslide="handleTap" bind:imgErr="handleImgErr"></carousel>
+         <view class="btn" wx:for="{{F2}}">
+             <xcx-image data-url="{{item.href}}" bind:tap="jumpLink" src="{{item.img}}" width="{{750}}" height="{{160}}"></xcx-image>
+         </view>
+         <block wx:for="{{F3}}">
+             <view class="f3-item">
+                <xcx-image data-url="{{item.href}}" bind:tap="jumpLink" src="{{item.img}}" width="{{250}}" height="{{288}}"></xcx-image>
+             </view>
+         </block>
+          <view class="btn" wx:for="{{F4}}">
+             <xcx-image data-url="{{item.href}}" bind:tap="jumpLink" src="{{item.img}}" width="{{750}}" height="{{160}}"></xcx-image>
+         </view>
+          <view class="btn" wx:for="{{F5}}">
+             <xcx-image data-url="{{item.href}}" bind:tap="jumpLink" src="{{item.img}}" width="{{750}}" height="{{800}}"></xcx-image>
+         </view>
+         <block wx:for="{{F6}}">
+            <image data-url="{{item.href}}" bind:tap="jumpLink" style="width:100%" src="{{item.img}}" mode="widthFix">
+                
+            </image>
+         </block>
+         <!-- <view class="box-list">
+             <block wx:for="{{F6}}">
+                <view class="box" wx:if="{{index%2===0}}">
+                    <view class="box-left">
+                        <xcx-image src="" width="{{340}}" height="{{400}}"></xcx-image>
+                    </view>
+                    <view class="box-right">
+                        <view class="name">name</view>
+                        <view class="desc">desc</view>
+                        <view class="money">
+                            ￥<text class="num">520</text>
+                        </view>
+                        <view class="box-btn">立即购买</view>
+                    </view>
+                </view>
+                <view class="box" wx:if="{{index%2===1}}">
+                  
+                    <view class="box-right">
+                        <view class="name">name</view>
+                        <view class="desc">desc</view>
+                        <view class="money">
+                            ￥<text class="num">520</text>
+                        </view>
+                        <view class="box-btn">立即购买</view>
+                    </view>
+                      <view class="box-left">
+                        <xcx-image src="" width="{{340}}" height="{{400}}"></xcx-image>
+                    </view>
+                </view>
+             </block>
+            
+         </view> -->
+         <view class="btn" wx:for="{{F7}}">
+             <xcx-image data-url="{{item.href}}" bind:tap="jumpLink" src="{{item.img}}" width="{{750}}" height="{{160}}"></xcx-image>
+         </view>
+         <view class="service">
+             <button open-type="contact">联系客服</button>
+         </view>
+        <button wx:if="{{!release}}" catchtap="switchEnv">环境切换</button>
+    </view>
+</view>
+
+<wxs src="../../wxs/index.wxs" module="tools" />
+

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的消息",
+  "usingComponents": {
+    "dialog": "../../../../components/dialog/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index"
+  }
+}

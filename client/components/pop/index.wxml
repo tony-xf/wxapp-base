@@ -1,0 +1,16 @@
+ <van-popup
+        custom-class="notice-pop"
+        show="{{ show }}"
+        custom-style="height: 20%"
+    >
+        <view class="wrapper">
+            <view class="title">暂存需求单名称</view>
+            <view class="content">
+                <input maxlength="{{16}}" type="text" placeholder="请填写名称以便查找需求单" value="{{name}}" bindinput="handleInput" />
+            </view>
+            <view class="button">
+                <button class="btn cancel" bind:tap="cancel">取消</button>
+                <button class="btn confirm" bind:tap="confirm">确定</button>
+            </view>
+        </view>
+    </van-popup>

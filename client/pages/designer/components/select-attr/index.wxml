@@ -1,0 +1,75 @@
+<view class="attr-view" wx:if="{{visible}}" catchtap="tapFilter">
+    <view class="attr-contain">
+        <view class="filter-top">
+            <view class="filter-top-vertical-line"></view>
+            <view class="filter-top-text">作品资料</view>
+        </view>
+        <view class="filter-group">
+            <view class="filter-group-name">
+                <text>分类</text>
+                <view class="select-list">
+                    <view class="select-item" bindtap="delSelectCategory" wx:key="index" wx:for="{{selectCategoryArr}}" data-index="{{index}}">
+                        <text class="{{index === (selectCategoryArr.length-1)? 'cur':''}}">{{item.name}}</text>
+                        <van-icon wx:if="{{index === (selectCategoryArr.length-1)}}" name="clear" size="28rpx" color="#C9B582"></van-icon>
+                        <text wx:if="{{index !== (selectCategoryArr.length-1)}}"> > </text>
+                    </view>
+                </view>
+            </view>
+            <view class="filter-choose-label-content">
+                <view class="filter-choose-label {{item.selected?'label-choosing':''}}" data-index="{{index}}" wx:for="{{curCategoryOption}}" wx:key="id" bindtap="selectCategory" data-id="{{item.id}}">{{item.name}}</view>
+            </view>
+        </view>
+        <view class="filter-group" wx:for="{{attributeList}}" wx:key="id">
+            <view class="filter-group-name">{{item.label}}</view>
+            <view class="filter-choose-label-content">
+                <view class="filter-choose-label {{label.selected?'label-choosing':''}}" data-index="{{index}}" wx:for="{{item.attribute}}" wx:key="id" wx:for-item="label" wx:for-index="{{i}}"  bindtap="selectAttr" data-id="{{label.id}}">{{label.name}}</view>
+            </view>
+        </view>
+        <view class="filter-group">
+            <view class="field" wx:for="{{extensionList}}" wx:key="index">
+                <view class="label">
+                    <text>{{item.label}}</text>
+                </view>
+                <view class="cont" wx:if="{{item.type === 'text'}}">
+                    <input data-obj="{{item.id}}" catchinput="bindInput" value="{{categoryExtensionField[item.id]}}" placeholder="请输入{{item.label}}"></input>
+                </view>
+                <view class="cont" wx:if="{{item.type === 'textarea'}}">
+                    <text-area
+                            bindchange="bindInputFiled"
+                            value="{{form.categoryExtensionField[index].value}}"
+                            data-obj="{{item.id}}"
+                            placeholder="请输入{{item.label}}"
+                            placeholder-style="color:#787878">
+                    </text-area>
+                </view>
+                <view class="cont" wx:if="{{item.type === 'select'}}" style="border:none; padding: 0">
+                    <view class="filter-choose-label-content">
+                        <view class="filter-choose-label {{label.selected?'label-choosing':''}}" data-index="{{index}}" wx:for="{{item.attribute}}" wx:key="i" wx:for-item="label" wx:for-index="{{i}}"  bindtap="selectExtension" data-id="{{label.id}}">{{label.name}}</view>
+                    </view>
+                </view>
+                <view class="cont" wx:if="{{item.type === 'multiple'}}" style="border:none; padding: 0">
+                    <view class="filter-choose-label-content">
+                        <view class="filter-choose-label {{label.selected?'label-choosing':''}}" data-index="{{index}}" wx:for="{{item.attribute}}" wx:key="i" wx:for-item="label" wx:for-index="{{i}}"  bindtap="selectExtension" data-id="{{label.id}}">{{label.name}}</view>
+                    </view>
+                </view>
+                <view class="cont" wx:if="{{item.type === 'money'}}">
+                    <input data-obj="{{item.id}}"  value="{{categoryExtensionField[item.id]}}"catchinput="bindInput" type="digit" placeholder="请输入{{item.rang? item.rang+'之间的': ''}}{{item.label}}"/>
+                </view>
+                <view class="cont" wx:if="{{item.type === 'num'}}">
+                    <input data-obj="{{item.id}}" value="{{categoryExtensionField[item.id]}}" catchinput="bindInput" placeholder="请输入{{item.rang? item.rang+'之间的': ''}}{{item.label}}" />
+                </view>
+                <view class="cont" wx:if="{{item.type === 'date'}}">
+                    <picker mode="date" value="{{date}}" data-obj="{{item.id}}" bindchange="bindInput">
+                        <view wx:if="{{categoryExtensionField[item.id]}}">{{categoryExtensionField[item.id]}}</view>
+                        <view wx:else>请选择{{item.label}}</view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+        <view class="filter-group-bottom"></view>
+    </view>
+        <view class="filter-bottom">
+            <view class="reset btn" bindtap="close">取消</view>
+            <view class="confirm btn" bindtap="handleConfirm">确认</view>
+        </view>
+    </view>

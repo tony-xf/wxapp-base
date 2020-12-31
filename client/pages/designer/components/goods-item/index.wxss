@@ -1,0 +1,48 @@
+.goods-item {
+  width: 328rpx;
+  padding: 24rpx;
+  background: #fff; }
+  .goods-item .img-box {
+    position: relative; }
+  .goods-item .img {
+    width: 280rpx;
+    height: 280rpx;
+    border: 1px solid #e5e5e5; }
+  .goods-item .name {
+    width: 280rpx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 14rpx 0; }
+  .goods-item .tag-list {
+    display: flex;
+    overflow: auto;
+    margin-bottom: 16rpx; }
+    .goods-item .tag-list .tag {
+      flex-shrink: 0;
+      height: 40rpx;
+      line-height: 40rpx;
+      color: #9f9f9f;
+      background: #eee;
+      padding: 0 14rpx;
+      border-radius: 20rpx;
+      font-size: 24rpx;
+      margin-right: 16rpx; }
+  .goods-item .tool {
+    display: flex;
+    align-items: center;
+    font-size: 24rpx;
+    color: #a6a6a6;
+    padding-top: 18rpx;
+    border-top: 1px solid #ddd; }
+    .goods-item .tool .item {
+      display: flex;
+      align-items: center;
+      border-right: 1px solid #a6a6a6;
+      padding: 0 16rpx; }
+      .goods-item .tool .item van-icon {
+        margin-right: 6rpx; }
+      .goods-item .tool .item:last-child {
+        border: none; }
+      .goods-item .tool .item:first-child {
+        padding-left: 0; }

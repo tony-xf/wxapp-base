@@ -1,0 +1,52 @@
+<view class="container" wx:if="{{pageInited}}">
+    <dialog id="dialog" showCancel="true"></dialog>
+    <view class="filter">
+        <view class="filter-order" bindtap="selectMenu">
+            <text class="{{options.order !=='all' ?'selected':''}}">{{selectOrderText||'默认排序'}}</text>
+            <image class="filter-order-icon" src="/images/search-result/sort.png"/>
+        </view>
+        <view class="filter-isolate-line"></view>
+        <view class="filter-params" bindtap="showFilter">
+            <text class="{{hasFilter ?'selected': ''}}">筛选</text>
+            <image class="filter-params-icon" src="/images/search-result/filter.png"/>
+        </view>
+    </view>
+    <view wx:if="{{selectShow}}" bindtap="selectMenu" class="filter-order-select-background">
+        <view class="filter-order-select">
+            <view class="filter-order-select-option {{options.order === item.key?'picked-order':''}}" bindtap="handleOrder" data-order="{{item}}" wx:for="{{orderOptions}}" wx:key="key">
+                <view class="filter-order-text">{{item.value}}</view>
+                <image wx:if="{{options.order === item.key}}" class="selected-green-icon" src="/images/search-result/selected-green.png"/>
+            </view>
+
+        </view>
+    </view>
+    <view class="fixed-btn" bindtap="worksAdd">
+        <van-icon name="add" size="100rpx"></van-icon>
+    </view>
+    <filter-view id="filterView" total="{{total}}" list="{{filterList}}" bindselected="handleSelected" bindconfirm="confirmFilter"></filter-view>
+    <scroll-view catchtap="clearDropDown" scroll-y='true' style="height: calc(100vh - 90rpx)" bindscrolltolower='lower' scroll-top='{{topNum}}' enable-back-to-top>
+        <view class="goods-list" wx:if="{{total > 0}}">
+            <goods-item wx:for="{{goodsList}}" goods="{{item}}" wx:key="id">
+                <view class="tool-bar" slot="tool" wx:if="{{item.status !== 1 && item.status !== 2}}">
+                    <view class="icon-box" catchtap="showTool" data-index="{{index}}">
+                        <van-icon name="ellipsis" size="40rpx"></van-icon>
+                    </view>
+                    <view class="drop-down" hidden="{{!item.visible}}">
+                        <view class="item" catchtap="worksEdit" data-status="{{item.status}}" data-work="{{item.worksId}}">编辑</view>
+                        <view class="item" data-name="{{item.name}}" catchtap="worksDel" data-id="{{item.worksId}}">删除</view>
+                    </view>
+                </view>
+                <view class="tag{{item.status == 4?' success':(item.status !==2 ?' disable':'')}}" slot="tag">{{item.statusLabel}}</view>
+            </goods-item>
+        </view>
+        <view wx:if="{{loadAll&&total>0}}" class="bottom-line">没有更多作品了</view>
+        <view wx:if="{{total < 1}}">
+            <view class="no-result-view">
+                <image style="height:250rpx;width:250rpx;" src="/images/search-result/empty-icon.png"/>
+            </view>
+            <view class="no-result-desc">非常抱歉！暂时还没有作品</view>
+        </view>
+    </scroll-view>
+</view>
+
+<wxs src="../../../wxs/index.wxs" module="tools" />

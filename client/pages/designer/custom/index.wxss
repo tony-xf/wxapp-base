@@ -1,0 +1,73 @@
+page {
+  background: #eee; }
+
+.custom-page {
+  font-size: 28rpx;
+  color: #101010; }
+  .custom-page .search-bar {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    height: 82rpx; }
+    .custom-page .search-bar .input-box {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      margin-left: 28rpx;
+      border: 1px solid #d7d7d7;
+      border-radius: 16rpx;
+      padding: 0 24rpx; }
+      .custom-page .search-bar .input-box input {
+        height: 60rpx;
+        width: 100%;
+        box-sizing: border-box;
+        color: #999; }
+    .custom-page .search-bar .filter-btn {
+      display: flex;
+      width: 134rpx;
+      justify-content: center;
+      flex-shrink: 0; }
+  .custom-page .scroll-view {
+    width: 100vw;
+    box-sizing: border-box;
+    height: calc(100vh - 82rpx);
+    padding: 32rpx; }
+    .custom-page .scroll-view .order-item {
+      background: #fff;
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+      color: #999;
+      padding: 20rpx 16rpx;
+      border-radius: 12rpx;
+      line-height: 46rpx;
+      margin-bottom: 20rpx; }
+      .custom-page .scroll-view .order-item .top {
+        display: flex;
+        justify-content: space-between; }
+        .custom-page .scroll-view .order-item .top .code {
+          color: #333; }
+        .custom-page .scroll-view .order-item .top .status {
+          color: #C9B582; }
+  .custom-page .time-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 20rpx; }
+    .custom-page .time-bar .space {
+      margin: 0 10rpx; }
+    .custom-page .time-bar .time {
+      display: flex;
+      align-items: center;
+      border: 2rpx solid #c2c2c2;
+      padding: 10rpx 16rpx;
+      border-radius: 10rpx; }
+      .custom-page .time-bar .time van-icon {
+        margin-right: 10rpx; }
+  .custom-page .loadStatus .noMore {
+    text-align: center;
+    line-height: 80rpx;
+    color: #a2a2a2; }
+  .custom-page .no-res {
+    text-align: center;
+    padding: 30rpx 0; }
+    .custom-page .no-res image {
+      width: 336rpx;
+      height: 349rpx; }

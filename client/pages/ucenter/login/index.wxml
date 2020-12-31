@@ -1,0 +1,24 @@
+<view class="login_page">
+    <view class="logo">
+        <image src="/images/logo.png"></image>
+        <text class="text">金海岸</text>
+    </view>
+    <view class="main">
+        <block wx:if="{{!isAuthorization}}">
+            <view class="author_info">
+                <view>申请获取你的以下信息</view>
+                <view style="line-height: 36rpx;margin-top: 30rpx;">·微信昵称</view>
+                <view style="line-height: 36rpx;margin-top: 10rpx;">·微信头像</view>
+                <!-- <view style="line-height: 36rpx;margin-top: 10rpx;">·所在区域</view> -->
+            </view>
+            <button class="clear-btn" type="primary" lang="zh_CN" bindgetuserinfo="getUserInfo" open-type="getUserInfo" loading="{{loading}}">微信授权</button>
+        </block>
+        <block wx:elif="{{!isBindMobile}}">
+            <view class="author_info">
+                <view>申请获取你的以下信息</view>
+                <view style="line-height: 36rpx;margin-top: 30rpx;">·手机号码</view>
+            </view>
+            <button class="clear-btn" type="primary" lang="zh_CN" bindgetphonenumber="getPhoneNumber" open-type="getPhoneNumber" loading="{{loading}}">微信授权</button>
+        </block>
+    </view>
+</view>

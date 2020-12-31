@@ -1,0 +1,21 @@
+<view class="goods-item">
+    <view class="img-box">
+        <slot name="tag"></slot>
+        <image class="img" src="{{goods.image}}"></image>
+    </view>
+    <view class="name"><text>{{goods.name}}</text></view>
+    <view class="tag-list">
+        <text class="tag" wx:for="{{goods.label}}" wx:key="index">{{item}}</text>
+    </view>
+    <view class="tool">
+        <view class="item">
+            <van-icon name="good-job-o"></van-icon>
+            <text>{{goods.likeQuantity}}</text>
+        </view>
+        <view class="item">
+            <van-icon style="margin-top: -8rpx;" name="/images/common.png"></van-icon>
+            <text>{{goods.commentQuantity}}</text>
+        </view>
+    </view>
+    <slot name="tool"></slot>
+</view>

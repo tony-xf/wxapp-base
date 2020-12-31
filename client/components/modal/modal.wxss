@@ -1,0 +1,115 @@
+.modalWrap {
+    position: relative;
+    z-index: 5;
+}
+
+.modal {
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+
+.modal .inner {
+    width: 500rpx;
+    background-color: #fff;
+    border-radius: 18rpx;
+    overflow: hidden;
+}
+
+.modal .inner .hd {
+    position: relative;
+    height: 96rpx;
+    line-height: 96rpx;
+    text-align: center;
+    font-size: 32rpx;
+    box-sizing: border-box;
+    color: #000;
+}
+.modal .inner .hd::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    transform: scale(0.5);
+    border-bottom: 1rpx solid #D7D7D7;
+}
+.modal .inner .ft { 
+    display: flex;
+    border-top: 1rpx solid #f4f4f4;
+}
+
+.modal .inner .ft .btn {
+    flex-basis: 0;
+    flex-grow: 1;
+    line-height: 68rpx;
+    text-align: center;
+    font-size: 28rpx;
+}
+.modal .inner .ft .btn.cancel {
+    background: #F2F2F2;
+    color: #000;
+}
+.modal .inner .ft .btn.confirm {
+    background: #FF4444;
+    color: #fff;
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn ease .3s forwards;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.animate-fade-out {
+    animation: fadeOut ease .3s forwards;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "上传作品",
+  "usingComponents": {
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "text-area": "../../../components/text-area/index",
+    "select-attr": "../components/select-attr/index"
+  }
+}

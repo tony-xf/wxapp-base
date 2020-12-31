@@ -1,0 +1,30 @@
+page {
+  background: #eee; }
+
+.designer-list-page .designer-list {
+  font-size: 28rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx 14rpx; }
+  .designer-list-page .designer-list .item {
+    width: 220rpx;
+    background: #fff;
+    padding: 32rpx;
+    font-size: 28rpx;
+    margin: 10rpx;
+    border-radius: 12rpx;
+    text-align: center; }
+    .designer-list-page .designer-list .item image {
+      width: 144rpx;
+      height: 144rpx;
+      border-radius: 50%;
+      margin-bottom: 20rpx; }
+
+.designer-list-page .no-result-view {
+  margin: 80rpx auto 48rpx auto;
+  height: 250rpx;
+  width: 250rpx; }
+
+.designer-list-page .no-result-desc {
+  text-align: center;
+  font-size: 28rpx; }

@@ -1,0 +1,71 @@
+.detail-page {
+  font-size: 28rpx;
+  color: #101010; }
+  .detail-page .header {
+    text-align: center;
+    background: #fff;
+    padding: 60rpx 0 48rpx; }
+    .detail-page .header .avatar {
+      width: 200rpx;
+      height: 200rpx;
+      border-radius: 50%;
+      margin-bottom: 20rpx; }
+  .detail-page .group {
+    margin-bottom: 30rpx; }
+    .detail-page .group .title {
+      font-size: 36rpx;
+      margin-bottom: 30rpx;
+      padding: 0 30rpx; }
+    .detail-page .group .field {
+      display: flex;
+      align-items: center;
+      padding: 18rpx 0; }
+      .detail-page .group .field.field-start {
+        align-items: flex-start; }
+      .detail-page .group .field .label {
+        padding-left: 20rpx;
+        width: 186rpx;
+        text-align: right;
+        flex-shrink: 0; }
+        .detail-page .group .field .label .red {
+          margin-right: 6rpx; }
+      .detail-page .group .field .cont {
+        margin: 0 30rpx;
+        flex-grow: 1;
+        border: 1px solid #eee;
+        padding: 10rpx 16rpx;
+        border-radius: 8rpx; }
+        .detail-page .group .field .cont .tips {
+          margin-bottom: 18rpx; }
+        .detail-page .group .field .cont input {
+          width: 100%; }
+        .detail-page .group .field .cont van-radio-group {
+          display: flex; }
+        .detail-page .group .field .cont .van-radio {
+          margin-right: 50rpx; }
+        .detail-page .group .field .cont .van-radio__label {
+          margin-left: 10rpx; }
+        .detail-page .group .field .cont .picker {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+        .detail-page .group .field .cont textarea {
+          width: 100%; }
+        .detail-page .group .field .cont .placeholder {
+          color: #787878; }
+  .detail-page .btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .detail-page .btn-group .submit {
+      display: flex;
+      width: 540rpx;
+      height: 80rpx;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background-color: #C9B582;
+      box-sizing: border-box;
+      border-color: #C9B582;
+      border-radius: 80rpx;
+      margin: 56rpx auto 30rpx; }

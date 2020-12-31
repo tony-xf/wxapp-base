@@ -1,0 +1,19 @@
+<view catchtouchmove="true" class="modalWrap {{animateCss}}" wx:if="{{visible}}">
+    <view bindtap="handleTapBackdrop" catchtouchmove="true" class="backdrop"></view>
+    <view class="modal" style="{{layoutStyle}}">
+        <view class="inner" style="{{modalStyle}}">
+            <view class="hd" style="{{hdStyle}}" wx:if="{{title}}">{{title}}</view>
+            <view class="bd">
+                <slot></slot>
+            </view>
+            <view class="ft" wx:if="{{showCancel||showConfirm}}">
+                <view catchtap="handleTapCancel" class="btn cancel" wx:if="{{showCancel}}">
+                    {{cancelText}}
+                </view>
+                <view catchtap="handleTapConfirm" class="btn confirm" wx:if="{{showConfirm}}">
+                    {{confirmText}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

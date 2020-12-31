@@ -1,0 +1,58 @@
+<view class="apply-page">
+    <dialog id="dialog"></dialog>
+    <view class="field">
+        <view class="label">
+            <text class="red">*</text>
+            <text>姓名</text>
+        </view>
+        <view class="cont">
+            <input data-name="name" catchinput="handleInput" value="{{searchValue}}" placeholder="请输入姓名"></input>
+        </view>
+    </view>
+    <view class="field">
+        <view class="label">
+            <text class="red">*</text>
+            <text>身份证号</text>
+        </view>
+        <view class="cont">
+            <input data-name="idCard" catchinput="handleInput" value="{{searchValue}}" placeholder="请输入身份证号"></input>
+        </view>
+    </view>
+    <view class="field">
+        <view class="label">
+            <text class="red">*</text>
+            <text>邮箱</text>
+        </view>
+        <view class="cont">
+            <input data-name="email" catchinput="handleInput" value="{{searchValue}}" placeholder="请输入邮箱"></input>
+        </view>
+    </view>
+    <view class="field" style="align-items: flex-start;">
+        <view class="label">
+            <text class="red">*</text>
+            <text>简历附件</text>
+        </view>
+        <view class="cont">
+            <view class="tips">仅允许上传单个pdf文件，大小不超过5MB</view>
+            <view class="upload">
+                <view class="res-view" wx:if="{{form.resume.length > 0}}">
+                    <text>{{form.resume[0].label}}</text>
+                    <van-icon catchtap="clearResume" name="cross" size="40rpx"></van-icon>
+                </view>
+                <van-uploader
+                        wx:else
+                        max-count="1"
+                        accept="file"
+                        max-size="5242880"
+                        use-before-read
+                        bind:before-read="beforeRead"
+                        bind:after-read="afterRead">
+                    <van-button size="small" plain icon="column" color="#999">上传文件</van-button>
+                </van-uploader>
+            </view>
+        </view>
+    </view>
+    <view class="btn-group">
+        <view class="submit" bindtap="handleSubmit">提交申请</view>
+    </view>
+</view>

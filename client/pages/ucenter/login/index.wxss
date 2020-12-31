@@ -1,0 +1,29 @@
+.login_page {
+  padding: 0 100rpx;
+  font-size: 28rpx;
+  color: #333; }
+
+.login_page .logo {
+  padding-top: 110rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #f2f2f2; }
+
+.login_page .logo image {
+  width: 480rpx;
+  height: 160rpx; }
+
+.login_page .logo .text {
+  font-size: 32rpx;
+  margin: 20rpx 0 30rpx; }
+
+.login_page button {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  background: #70B603; }
+
+.login_page .author_info {
+  margin: 30rpx 0; }

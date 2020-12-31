@@ -1,0 +1,60 @@
+<view class="comment-page">
+    <view class="tab-pane">
+        <view class="item{{curTab === item.key?' cur':''}}" wx:for="{{tabOptions}}" wx:key="key" catchtap="changeTab" data-tab="{{item.key}}">
+            <text>{{item.value}}</text>
+            <text wx:if="{{item.num}}">({{item.num}})</text>
+        </view>
+    </view>
+    <scroll-view scroll-y="true" class="scroll-view" bindscrolltolower="handleScroll"  wx:if="{{total > 0}}">
+        <view class="commentList">
+            <block wx:for="{{list}}" wx:key="index">
+                <view class="comment-item">
+                    <view class="comment-status">
+                        <view class="tag">{{item.replyStatusLabel}}</view>
+                    </view>
+                    <view class="comment-body">
+                        <view class="comment-title">
+                            <view>{{item.customerNick}}</view>
+                        </view>
+                        <view class="comment-content">{{item.content}}</view>
+                        <view class="comment-title">
+                            <view>{{item.createAt}}</view>
+                            <view class="reply" wx:if="{{item.replyStatus == 1}}" bind:tap="commentReply" data-id="{{item.commentId}}" data-index="{{index}}">
+                                <van-icon name="{{replyIcon}}" size="40rpx"></van-icon>
+                                <text>回复</text>
+                            </view>
+                        </view>
+                        <view class="comment-content" wx:if="{{item.children.length}}">
+                            <view class="reply-item" wx:for="{{item.children}}" wx:key="index">
+                                <view class="top">
+                                    <text class="name">{{item.designerName}}</text>
+                                    <text>回复</text>
+                                </view>
+                                <view>{{item.content}}</view>
+                                <view class="reply-time">{{item.createAt}}</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="works-name">{{item.worksName}}</view>
+                </view>
+            </block>
+        </view>
+        <view class="loadStatus" wx:if="{{finished}}">
+            <view class="noMore">没有更多评价了</view>
+            <!--<view class="loading" wx:if="{{loading}}">
+                <image style="width: 150rpx" src="/static/images/product/loading.gif" alt="loading" />
+            </view>-->
+        </view>
+    </scroll-view>
+    <view class="no-res" wx:if="{{total < 1}}">
+        <image src="{{icon}}"></image>
+        <view>暂时没有该状态的评价</view>
+    </view>
+    <dialog id="dialog" showCancel="true" confirmText="提交">
+        <view class="comment-form" slot="content">
+            <view><text>回复</text><text class="nick">{{replayForm.nick}}</text></view>
+            <textarea bindinput="inputReply" valeu="{{replayForm.content}}" placeholder="请输入不超过50字回复" placeholder-style="color: rgba(51,51,51,0.6);" maxlength="50" auto-focus="true"/>
+            <view class="tips">提示：回复审核通过后会发布回复，不通过则需要重新提交回复</view>
+        </view>
+    </dialog>
+</view>

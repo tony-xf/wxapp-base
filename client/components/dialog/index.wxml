@@ -1,0 +1,18 @@
+<view class="confirm-modal" style="display: {{visible ? 'flex' : 'none'}}">
+  <view class="confirm-dialog">
+    <view class="dialog-top" wx:if="{{title}}">{{title}}</view>
+    <view class="dialog-content" wx:if="{{content}}">
+      {{content}}
+    </view>
+    <view class="dialog-content" wx:else>
+      <slot name="content"></slot>
+    </view>
+    <view class="dialog-bottom">
+      <view class="left-button" wx:if="{{showCancel}}" catchtap="cancel">{{cancelTxt}}</view>
+      <view class="right-button" catchtap="confirm">{{confirmText}}</view>
+    </view>
+    <view class="close-button" wx:if="{{showClose}}" catchtap="cancel" data-type="close">
+      <van-icon name="cross"></van-icon>
+    </view>
+  </view>
+</view>

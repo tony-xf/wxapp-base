@@ -1,0 +1,13 @@
+ <van-popup
+        custom-class="notice-pop"
+        show="{{ show }}"
+        custom-style="height: 20%"
+    >
+        <view class="wrapper">
+            <view class="title">提示</view>
+            <view class="content">
+                必须成为会员后才能进行下一步操作
+            </view>
+            <button class="btn" lang="zh_CN" bindgetphonenumber="getPhoneNumber" open-type="getPhoneNumber">去授权注册</button>
+        </view>
+    </van-popup>

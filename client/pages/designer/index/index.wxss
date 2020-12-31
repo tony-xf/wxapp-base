@@ -1,0 +1,96 @@
+page {
+  background: #eee; }
+
+.designer-page {
+  font-size: 28rpx;
+  color: #101010; }
+  .designer-page .designer-info {
+    padding: 0 24rpx 24rpx 24rpx;
+    border-bottom: 1px solid #eee;
+    background: #fff; }
+    .designer-page .designer-info .top {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 80rpx; }
+      .designer-page .designer-info .top button {
+        display: flex;
+        height: 56rpx;
+        width: 120rpx;
+        align-items: center;
+        justify-content: center;
+        border-color: #cdcdcd;
+        margin: 0;
+        font-size: 28rpx; }
+    .designer-page .designer-info .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .designer-page .designer-info .info .avatar-view {
+        position: relative;
+        margin-bottom: 16rpx; }
+        .designer-page .designer-info .info .avatar-view .avatar {
+          width: 160rpx;
+          height: 160rpx;
+          border-radius: 50%; }
+        .designer-page .designer-info .info .avatar-view van-icon {
+          position: absolute;
+          bottom: 10rpx;
+          right: 10rpx; }
+    .designer-page .designer-info .statistic {
+      display: flex;
+      margin-top: 40rpx;
+      color: #c2b0b0;
+      justify-content: space-around; }
+  .designer-page .tab .tab-pane {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    width: 100%; }
+    .designer-page .tab .tab-pane.fixed-pane {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99; }
+    .designer-page .tab .tab-pane .item {
+      display: flex;
+      height: 100rpx;
+      align-items: center;
+      padding: 0 24rpx;
+      border-bottom: 6rpx solid #fff; }
+      .designer-page .tab .tab-pane .item.cur {
+        color: #f22424;
+        border-color: #f22424; }
+  .designer-page .tab .tab-cont {
+    background: #eee;
+    padding: 30rpx; }
+    .designer-page .tab .tab-cont .desc-block {
+      background: #fff; }
+    .designer-page .tab .tab-cont .goods-list {
+      display: flex;
+      flex-wrap: wrap; }
+      .designer-page .tab .tab-cont .goods-list goods-item {
+        margin-bottom: 30rpx; }
+        .designer-page .tab .tab-cont .goods-list goods-item:nth-child(2n) {
+          margin-left: 30rpx; }
+
+.desc-block {
+  padding: 20rpx 0; }
+  .desc-block .item {
+    display: flex;
+    margin-bottom: 20rpx;
+    align-items: flex-start;
+    line-height: 1.4; }
+    .desc-block .item .label {
+      width: 200rpx;
+      text-align: right;
+      color: #b8b8b8; }
+    .desc-block .item .cont {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 20rpx;
+      width: calc(100% - 200rpx);
+      line-height: 1.4; }
+      .desc-block .item .cont .tag {
+        flex-shrink: 0;
+        margin-right: 16rpx; }

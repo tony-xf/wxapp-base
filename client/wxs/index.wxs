@@ -1,0 +1,121 @@
+ function returnFloat(value){
+     var value = Math.round(parseFloat(value) * 100) / 100;
+     var s = value.toString().split(".");
+     if(s.length== 1){
+       value = value.toString() + ".00";
+       return value;
+     }
+     if (s.length > 1) {
+       if (s[1].length < 2) {
+        value = value.toString() + "0";
+      }
+      return value;
+    }
+ }
+function toPrice(val) {
+    
+    val = +val;
+    return returnFloat(val)
+
+    // return parseFloat(val.toFixed(2))
+};
+function getPrice(amount,ticket,use) {
+  amount = parseFloat(amount)
+  ticket = parseFloat(ticket)
+  if(use) {
+  var price = 0
+    if(amount > ticket) {
+      price = amount - ticket
+    }
+    return toPrice(price)
+  }
+  else {
+    return toPrice(amount)
+  }
+};
+function getSavePrice(amount,ticket,use) {
+  amount = parseFloat(amount)
+  ticket = parseFloat(ticket)
+  if(use) {
+    if(amount > ticket) {
+      return returnFloat(ticket)
+    }else {
+      return returnFloat(amount)
+    }
+  }
+  else {
+    return '0.00'
+  }
+};
+function getDateStr(time) {
+    
+    if (time < 1000) {
+        return ("")
+    };
+    var sUnit = 1000;
+    var mUnit = sUnit * 60;
+    var hUnit = mUnit * 60;
+    var dayUnit = hUnit * 24;
+    var timeGap = hUnit * 25;
+    if (time >= timeGap) {
+        var dayCount = Math.floor(time / dayUnit);
+        var hCount = Math.floor(time % dayUnit / hUnit);
+        return (dayCount + "天" + hCount + "小时")
+    };
+    var hCount = Math.floor(time / hUnit);
+    var mCount = Math.floor(time % hUnit / mUnit);
+    var sCount = Math.floor(time % mUnit / sUnit);
+    hCount < 10 && (hCount = "0" + hCount);
+    mCount < 10 && (mCount = "0" + mCount);
+    sCount < 10 && (sCount = "0" + sCount);
+    return (hCount + ":" + mCount + ":" + sCount)
+};
+
+var regYear = getRegExp("(y+)", "i");
+
+var dateFormat = function(timestamp,format){
+  if (!format) {
+    format = "yyyy-MM-dd hh:mm:ss";
+  }
+  timestamp = parseInt(timestamp);
+  var realDate = getDate(timestamp);
+  function timeFormat(num) {
+    return num < 10 ? '0' + num : num;
+  }
+  var date = [
+    ["M+", timeFormat(realDate.getMonth() + 1)],
+    ["d+", timeFormat(realDate.getDate())],
+    ["h+", timeFormat(realDate.getHours())],
+    ["m+", timeFormat(realDate.getMinutes())],
+    ["s+", timeFormat(realDate.getSeconds())],
+    ["q+", Math.floor((realDate.getMonth() + 3) / 3)],
+    ["S+", realDate.getMilliseconds()],
+  ];
+  var reg1 = regYear.exec(format);
+  if (reg1) {
+
+    format = format.replace(reg1[1], (realDate.getFullYear() + '').substring(4 - reg1[1].length));
+  }
+  for (var i=0;i<date.length;i++) {
+    var k = date[i][0];
+    var v = date[i][1];
+
+    var reg2 = getRegExp("(" + k + ")").exec(format);
+    if (reg2) {
+      format = format.replace(reg2[1], reg2[1].length == 1
+        ? v : ("00" + v).substring(("" + v).length));
+    }
+  }
+  return format;
+}
+var fullImgUrl = function(url) {
+  return url.indexOf('http') > -1 ? url : 'http:' + url
+}
+module.exports = {
+    toPrice: toPrice,
+    getDateStr: getDateStr,
+    dateFormat: dateFormat,
+    fullImgUrl: fullImgUrl,
+    getPrice: getPrice,
+    getSavePrice:getSavePrice
+}

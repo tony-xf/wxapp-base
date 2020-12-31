@@ -1,0 +1,121 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.14.0",
+  "appid": "wx0bae8eaba19bd193",
+  "projectname": "%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/designer/center/index",
+          "pathName": "pages/designer/center/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "设计师专栏列表",
+          "pathName": "pages/custom/designer-goods/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "定制单详情",
+          "pathName": "pages/designer/custom-detail/index",
+          "query": "id=a3f818e5-f65f-d857-598f-c1e387855996",
+          "scene": null
+        },
+        {
+          "name": "pages/designer/apply/index",
+          "pathName": "pages/designer/apply/index",
+          "query": "clienteleId=c6dce36e-265f-e301-4262-b04728584855",
+          "scene": null
+        },
+        {
+          "name": "设计师作品详情",
+          "pathName": "pages/designer/goods-detail/index",
+          "query": "id=9c9d7cd2-905f-d898-11da-046497976725",
+          "scene": null
+        },
+        {
+          "name": "作品管理",
+          "pathName": "pages/designer/goods-list/index",
+          "query": "id=a7fe670e-c75f-dab6-dd2d-f1e885992225",
+          "scene": null
+        },
+        {
+          "name": "作品申请",
+          "pathName": "pages/designer/work-upload/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "设计师列表",
+          "pathName": "pages/designer/list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/designer/goods-list/index",
+          "pathName": "pages/designer/goods-list/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

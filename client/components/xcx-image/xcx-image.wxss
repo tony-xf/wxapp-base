@@ -1,0 +1,21 @@
+.xcx-img-ctr {
+  position: relative;
+}
+
+.xcx-image {
+  animation-name: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.xcx-image.appear {
+  transition: opacity .3s cubic-bezier(0,.6,1,.3);
+  -webkit-transition: opacity .3s cubic-bezier(0,.6,1,.3);
+  opacity: 1;
+}

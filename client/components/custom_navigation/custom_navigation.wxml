@@ -1,0 +1,17 @@
+<view class="cu-custom" style="height:{{CustomBar}}px">
+  <view class="cu-bar fixed {{bgImage!=''?'none-bg text-white bg-img':''}}" style="color:{{textColor}};background:{{bgColor}};height:{{CustomBar}}px;padding-top:{{StatusBar}}px;{{customStyle}}">
+    <view class="action border-custom"  wx:if="{{isCustom}}" style="width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px)">
+      <view class="icon" bindtap="BackPage">
+         <van-icon name="arrow-left" size="20"/>
+      </view>
+      <view class="icon" bindtap="toHome">
+         <van-icon name="wap-home-o" size="20"/>
+      </view>
+      
+    </view>
+    <view class="content" style="top:{{StatusBar}}px">
+      {{navTitle}}
+    </view>
+    <!-- <slot name="right"></slot> -->
+  </view>
+</view>

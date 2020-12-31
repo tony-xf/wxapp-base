@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "金海岸",
+  "usingComponents": {
+    "carousel":"../../components/carousel/index",
+    "xcx-image":"../../components/xcx-image/xcx-image"
+  }
+}

@@ -1,0 +1,127 @@
+.attr-view {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background: #fff; }
+  .attr-view .attr-contain {
+    height: calc(100vh - 86rpx);
+    overflow-y: auto;
+    padding: 28rpx 28rpx 0 28rpx; }
+    .attr-view .attr-contain .filter-top .filter-top-vertical-line {
+      display: inline-block;
+      margin-right: 18rpx;
+      width: 4rpx;
+      height: 32rpx;
+      background: #bfbfbf; }
+    .attr-view .attr-contain .filter-top .filter-top-text {
+      display: inline-block;
+      font-size: 32rpx;
+      height: 32rpx;
+      line-height: 32rpx;
+      color: #acacac; }
+    .attr-view .attr-contain .select-list {
+      display: flex;
+      align-items: flex-end;
+      margin-left: 20rpx; }
+      .attr-view .attr-contain .select-list .select-item {
+        display: flex;
+        align-items: center;
+        margin: 0 10rpx;
+        font-size: 24rpx; }
+        .attr-view .attr-contain .select-list .select-item .cur {
+          color: #C9B582; }
+        .attr-view .attr-contain .select-list .select-item van-icon {
+          margin-left: 10rpx; }
+    .attr-view .attr-contain .filter-group {
+      margin: 30rpx 0 54rpx 0; }
+      .attr-view .attr-contain .filter-group .filter-group-name-price {
+        font-size: 28rpx;
+        margin-bottom: 22rpx; }
+      .attr-view .attr-contain .filter-group .filter-group-name {
+        display: flex;
+        width: 100%;
+        font-size: 32rpx;
+        margin-bottom: 20rpx; }
+      .attr-view .attr-contain .filter-group .filter-group-operate {
+        color: #b3b3b3;
+        vertical-align: top;
+        display: inline-block; }
+        .attr-view .attr-contain .filter-group .filter-group-operate .filter-group-icon {
+          vertical-align: top;
+          margin-top: 10rpx;
+          margin-left: 12rpx;
+          width: 12rpx;
+          height: 12rpx; }
+      .attr-view .attr-contain .filter-group .filter-price {
+        display: inline-block;
+        text-align: center;
+        background: #e6e6e6;
+        border-radius: 8rpx;
+        width: 228rpx;
+        height: 56rpx; }
+      .attr-view .attr-contain .filter-group .filter-hyphen {
+        display: inline-block;
+        vertical-align: top;
+        width: 40rpx;
+        height: 2rpx;
+        background: #bbbbbb;
+        margin: 27rpx 18rpx; }
+      .attr-view .attr-contain .filter-group .filter-choose-label {
+        display: inline-block;
+        width: 154rpx;
+        height: 56rpx;
+        text-align: center;
+        line-height: 56rpx;
+        margin-right: 18rpx;
+        margin-bottom: 18rpx;
+        background: #fff;
+        color: #333;
+        border: 2rpx solid #c2c2c2;
+        border-radius: 8rpx;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .attr-view .attr-contain .filter-group .label-choosing {
+        background: #65C7F7;
+        border: 0 !important;
+        color: #fff;
+        line-height: 54rpx; }
+    .attr-view .attr-contain .field {
+      padding: 18rpx 0; }
+      .attr-view .attr-contain .field .label {
+        font-size: 32rpx;
+        margin-bottom: 20rpx; }
+        .attr-view .attr-contain .field .label .red {
+          margin-right: 6rpx; }
+      .attr-view .attr-contain .field .cont {
+        padding: 16rpx 30rpx;
+        border: 1px solid #eee;
+        border-radius: 8rpx; }
+        .attr-view .attr-contain .field .cont .tips {
+          margin-bottom: 18rpx; }
+        .attr-view .attr-contain .field .cont input {
+          width: 100%; }
+    .attr-view .attr-contain .filter-group-bottom {
+      height: 86rpx; }
+  .attr-view .filter-bottom {
+    display: flex;
+    background: #fff;
+    height: 86rpx;
+    border-top: 2rpx solid #bbbbbb; }
+    .attr-view .filter-bottom .btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 86rpx;
+      font-size: 28rpx; }
+    .attr-view .filter-bottom .reset {
+      border-left: 2rpx solid #bbbbbb;
+      border-right: 2rpx solid #bbbbbb;
+      font-size: 28rpx; }
+    .attr-view .filter-bottom .confirm {
+      background: #4A608E;
+      color: #fff; }

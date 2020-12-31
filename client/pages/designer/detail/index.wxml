@@ -1,0 +1,100 @@
+<view class="detail-page">
+    <view class="header">
+        <van-uploader
+                max-count="1"
+                max-size="5242880"
+                use-before-read
+                bind:before-read="beforeRead"
+                bind:after-read="afterRead">
+            <image class="avatar" src="{{form.avatar}}"></image>
+        </van-uploader>
+        <view class="name">{{designer.name}}</view>
+    </view>
+    <view class="group">
+        <view class="title">基本信息</view>
+        <view class="field">
+            <view class="label">
+                <text>性别</text>
+            </view>
+            <view class="cont" style="border:none">
+                <van-radio-group value="{{ form.sex }}" bindchange="changeRadio">
+                    <van-radio icon-size="32rpx" name="1">男</van-radio>
+                    <van-radio icon-size="32rpx" name="0">女</van-radio>
+                </van-radio-group>
+            </view>
+        </view>
+        <view class="field">
+            <view class="label">
+                <text>现居地址</text>
+            </view>
+            <view class="cont">
+                <picker mode="region" bindchange="changeArea">
+                    <view class="picker">
+                        <text class="{{form.address.area? '':'placeholder'}}">{{form.address.area || '请选择区域'}}</text>
+                        <van-icon name="arrow-down" size="30rpx"></van-icon>
+                    </view>
+                </picker>
+            </view>
+        </view>
+        <view class="field">
+            <view class="label">
+                <text>身份证</text>
+            </view>
+            <view class="cont">
+                <input data-name="idCard" catchinput="handleInput" value="{{form.idCard}}" placeholder="请输入身份证号"></input>
+            </view>
+        </view>
+    </view>
+    <view class="group">
+        <view class="title">联系方式</view>
+        <view class="field">
+            <view class="label">
+                <text>手机号码</text>
+            </view>
+            <view class="cont">
+                <input value="{{designer.mobile}}" disabled="{{true}}"></input>
+            </view>
+        </view>
+        <view class="field">
+            <view class="label">
+                <text>邮箱</text>
+            </view>
+            <view class="cont">
+                <input data-name="email" catchinput="handleInput" value="{{form.email}}" placeholder="请输入邮箱"></input>
+            </view>
+        </view>
+    </view>
+    <view class="group">
+        <view class="title">教育背景</view>
+        <view class="field">
+            <view class="label">
+                <text>毕业院校</text>
+            </view>
+            <view class="cont">
+                <input data-name="school" catchinput="handleInput" value="{{form.school}}" placeholder="请输入毕业院校"></input>
+            </view>
+        </view>
+    </view>
+    <view class="group">
+        <view class="title">擅长风格</view>
+        <view class="field">
+            <view class="label">
+                <text>风格</text>
+            </view>
+            <view class="cont">
+                <input data-name="style" catchinput="handleInput" value="{{form.style}}" placeholder="请输入风格"></input>
+            </view>
+        </view>
+        <view class="field field-start">
+            <view class="label">
+                <text>简介</text>
+            </view>
+            <view class="cont">
+                <textarea data-name="introduction" maxlength="120" catchinput="handleInput" value="{{form.introduction}}" auto-height="true" placeholder="简介不超过120字" />
+            </view>
+        </view>
+    </view>
+    <view class="btn-group">
+        <view class="submit" bindtap="handleSubmit">保存</view>
+    </view>
+</view>

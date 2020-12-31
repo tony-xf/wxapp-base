@@ -1,0 +1,126 @@
+<view class="custom-detail-page">
+    <view class="block">
+        <view class="line">
+            <text class="label">编号</text>
+            <view class="cont">{{order.code}}</view>
+        </view>
+        <view class="line">
+            <text class="label">状态</text>
+            <view class="cont">{{order.statusLabel}}</view>
+        </view>
+        <view class="line">
+            <text class="label">设计师</text>
+            <view class="cont">{{order.designer.name}}</view>
+        </view>
+        <view class="line">
+            <text class="label">指派时间</text>
+            <view class="cont">{{order.assignTime}}</view>
+        </view>
+        <view class="line">
+            <text class="label">提交时间</text>
+            <view class="cont">{{order.createAt}}</view>
+        </view>
+    </view>
+    <view class="block">
+        <view class="line">
+            <text class="label">类型</text>
+            <view class="cont">{{order.typeLabel}}</view>
+        </view>
+        <view class="line" wx:if="{{order.type == 1}}">
+            <text class="label">手寸</text>
+            <view class="cont">{{order.demand.ringSize}}</view>
+        </view>
+        <view class="line">
+            <text class="label">预算</text>
+            <view class="cont">{{order.demand.budget}}</view>
+        </view>
+        <view class="line">
+            <text class="label">用途</text>
+            <view class="cont">{{order.demand.usage}}</view>
+        </view>
+        <view class="line">
+            <text class="label">风格</text>
+            <view class="cont">{{order.demand.style}}</view>
+        </view>
+        <view class="line">
+            <text class="label">描述</text>
+            <view class="cont">{{order.demand.describe}}</view>
+        </view>
+    </view>
+    <view class="block">
+        <view class="line">
+            <text class="label">材质</text>
+            <view class="cont">{{order.material.metal}}</view>
+        </view>
+        <view class="line">
+            <text class="label">刻字内容</text>
+            <view class="cont">{{order.material.content}}</view>
+        </view>
+        <view class="line">
+            <text class="label">字体选择</text>
+            <view class="cont">{{order.material.font}}</view>
+        </view>
+    </view>
+    <view class="block">
+        <view class="line title" catchtap="toggleInfo">
+            <text class="label">佩戴人信息</text>
+            <view class="cont"><van-icon style="transition: all .3s;{{infoVisible?'transform: rotate(-180deg);':''}}" name="arrow-down"></van-icon></view>
+        </view>
+        <view class="drop-down" hidden="{{!infoVisible}}">
+            <view class="line">
+                <text class="label">性别</text>
+                <view class="cont">{{order.information.sex}}</view>
+            </view>
+            <view class="line">
+                <text class="label">生日</text>
+                <view class="cont">{{order.information.birthday}}</view>
+            </view>
+            <view class="line">
+                <text class="label">年龄</text>
+                <view class="cont">{{order.information.age}}</view>
+            </view>
+            <view class="line">
+                <text class="label">职业</text>
+                <view class="cont">{{order.information.profession}}</view>
+            </view>
+            <view class="line">
+                <text class="label">爱好</text>
+                <view class="cont">{{order.information.hobby}}</view>
+            </view>
+            <view class="line">
+                <text class="label">信仰</text>
+                <view class="cont">{{order.information.faith}}</view>
+            </view>
+            <view class="line">
+                <text class="label">性格</text>
+                <view class="cont">{{order.information.character}}</view>
+            </view>
+            <view class="line">
+                <text class="label">体型</text>
+                <view class="cont">{{order.information.bodyType}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="group">
+        <view class="item">需求附件</view>
+        <view class="item" wx:for="{{order.attachment}}" wx:key="index">
+            <text class="label">{{item.newName}}</text>
+            <view class="cont">
+                <text>{{item.uploadTime}}</text>
+                <van-icon bindtap="showImg" data-url="{{item.url}}" size="36rpx" name="eye"></van-icon>
+                <van-icon bindtap="handleDownload" data-url="{{item.url}}" size="40rpx" name="back-top" style="transform:rotate(180deg);"></van-icon>
+            </view>
+        </view>
+    </view>
+    <view class="group">
+        <view class="item">设计附件</view>
+        <view class="item" wx:for="{{order.designAttachment}}" wx:key="index">
+            <text class="label">{{item.newName}}</text>
+            <view class="cont">
+                <text>{{item.uploadTime}}</text>
+                <van-icon bindtap="showImg" data-url="{{item.url}}" size="36rpx" name="eye"></van-icon>
+                <van-icon bindtap="handleDownload" data-url="{{item.url}}" size="40rpx" name="back-top" style="transform:rotate(180deg);"></van-icon>
+            </view>
+        </view>
+    </view>
+</view>

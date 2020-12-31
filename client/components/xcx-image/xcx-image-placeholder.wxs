@@ -1,0 +1,10 @@
+
+
+var onHadnleImageLoadSuccess = function(event, instance) {
+  var xcxImg = instance.selectComponent('.xcx-image')
+  xcxImg.addClass('appear')
+}
+
+module.exports = {
+  onHadnleImageLoadSuccess : onHadnleImageLoadSuccess
+}

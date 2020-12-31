@@ -1,0 +1,17 @@
+<view
+  class="xcx-img-ctr"
+  style="{{width?'width:'+width+'rpx;':''}}{{height?'height:'+height+'rpx;':''}}{{borderRadius?'border-radius:'+borderRadius+';':''}}"
+>
+  <image
+    src="{{_src}}"
+    lazyLoad
+    class="xcx-image {{error ?'appear':''}}"
+    mode="{{mode}}"
+    binderror="onError"
+    bindload="{{handle.onHadnleImageLoadSuccess}}"
+    style="{{width?'width:'+width+'rpx;':''}}{{height?'height:'+height+'rpx;':''}}{{opacity?'opacity:'+opacity+';':''}}{{borderRadius?'border-radius:'+borderRadius+';':''}}"
+  ></image>
+</view>
+
+<wxs src="./xcx-image-placeholder.wxs" module="handle"></wxs>
+<!--     binderror="onError" -->

@@ -1,0 +1,93 @@
+<view class="apply-page">
+    <select-attr id="selectAttr" bindconfirm="confirmAttr" list="{{categoryOptions}}"></select-attr>
+    <view class="field">
+        <view class="label">
+            <text class="red">*</text>
+            <text>作品名称</text>
+        </view>
+        <view class="cont">
+            <input data-name="name" catchinput="handleInput" value="{{form.name}}" placeholder="请输入作品名称"></input>
+        </view>
+    </view>
+    <view class="field select-field">
+        <view class="label">
+            <text class="red">*</text>
+            <text>作品资料</text>
+        </view>
+        <view class="cont" bindtap="selectAttr">
+            <text class="{{form.categoryId? '':'placeholder'}}">{{form.categoryId? '已填写': '请完善作品资料'}}</text>
+            <van-icon name="arrow" size="40rpx"></van-icon>
+        </view>
+    </view>
+    <view class="field select-field" wx:for="{{attributeList}}" wx:key="id">
+        <view class="label">
+            <text wx:if="{{item.chose}}" class="red">*</text>
+            <text>{{item.label}}</text>
+        </view>
+        <view class="cont" bindtap="selectAttr" data-id="{{item.id}}" data-arr="{{item.attribute}}">
+            <text class="placeholder">请选择{{item.label}}</text>
+            <van-icon name="arrow" size="40rpx"></van-icon>
+        </view>
+    </view>
+    <view class="field" wx:for="{{extensionList}}" wx:key="index">
+        <view class="label">
+            <text>{{item.label}}</text>
+        </view>
+        <view class="cont" wx:if="{{item.type === 'text'}}">
+            <input data-name="email" catchinput="handleInput" value="{{searchValue}}" placeholder="请输入{{item.label}}"></input>
+        </view>
+        <view class="cont" wx:if="{{item.type === 'textarea'}}">
+            <text-area
+                    bindchange="bindInputFiled"
+                    data-obj="form.errorDescribe"
+                    placeholder="请输入{{item.label}}"
+                    placeholder-style="color:#787878">
+            </text-area>
+        </view>
+    </view>
+    <view class="field" style="align-items: flex-start;">
+        <view class="label">
+            <text class="red">*</text>
+            <text>上传作品图</text>
+        </view>
+        <view class="cont">
+            <view class="tips">仅允许JPG,JPEG,PNG等格式图片，大小不超过2MB，首张图片为主图</view>
+            <view class="upload">
+                <van-uploader
+                    file-list="{{ worksList }}"
+                    data-mode="worksList"
+                    bind:delete="handleDelete"
+                    max-count="{{5}}"
+                    max-size="2097152"
+                    use-before-read
+                    bind:before-read="beforeRead"
+                    bind:after-read="afterRead"
+                />
+            </view>
+        </view>
+    </view>
+    <view class="field" style="align-items: flex-start;">
+        <view class="label">
+            <text>上传详情</text>
+        </view>
+        <view class="cont">
+            <view class="tips">仅允许JPG,JPEG,PNG等格式图片，大小不超过2MB</view>
+            <view class="upload">
+                <van-uploader
+                    data-index="{{index}}"
+                    data-mode="detailList"
+                    bind:delete="handleDelete"
+                    file-list="{{ detailList }}"
+                    max-count="{{5}}"
+                    max-size="2097152"
+                    use-before-read
+                    bind:before-read="beforeRead"
+                    bind:after-read="afterReadDetail"
+                />
+            </view>
+        </view>
+    </view>
+    <view class="btn-group">
+        <view class="submit" bindtap="submit">提交申请</view>
+    </view>
+</view>

@@ -1,0 +1,36 @@
+.entry-page{
+    font-size: 28rpx;
+    .main{
+        margin-top: 150rpx;
+        margin-bottom: 20rpx;
+        text-align: center;
+        image{
+            width: 336rpx;
+            height: 349rpx;
+        }
+    }
+    .btn-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .submit{
+            display: flex;
+            width: 540rpx;
+            height: 80rpx;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background-color: #C9B582;
+            box-sizing: border-box;
+            border-color: #C9B582;
+            border-radius: 80rpx;
+            margin: 56rpx auto 30rpx;
+        }
+        .cancel{
+            width: 540rpx;
+            text-align: center;
+            margin: auto;
+            color: #C9B582;
+        }
+    }
+}

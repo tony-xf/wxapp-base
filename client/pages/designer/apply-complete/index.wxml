@@ -1,0 +1,34 @@
+<view class="apply-complete">
+    <block wx:if="{{detail.status === 0}}">
+        <view class="msg-block">
+            <image src="{{review}}"></image>
+            <view class="msg">审核中</view>
+            <view>您的申请正在审核中请耐心等待，如有疑问请咨询客服。</view>
+        </view>
+        <view class="btn-group">
+            <!--<view class="border-btn" bindtap="toHome">返回商城</view>-->
+        </view>
+    </block>
+    <block wx:if="{{detail.status === 2}}">
+        <view class="msg-block">
+            <image src="{{noPass}}"></image>
+            <view class="msg">审核不通过</view>
+            <view>{{detail.remark}}，如有疑问请咨询客服。</view>
+        </view>
+        <view class="btn-group">
+            <view class="full-btn" bindtap="toApply">再次申请</view>
+            <!--<view class="border-btn" bindtap="toHome">返回商城</view>-->
+        </view>
+    </block>
+    <block wx:if="{{detail.status === 1}}">
+        <view class="msg-block">
+            <image src="{{pass}}"></image>
+            <view class="msg">审核通过</view>
+            <view>恭喜您已通过审核！</view>
+        </view>
+        <view class="btn-group">
+            <view class="full-btn" bindtap="toDesigner">进入设计师中心</view>
+            <!--<view class="border-btn" bindtap="toHome">返回商城</view>-->
+        </view>
+    </block>
+</view>

@@ -1,0 +1,7 @@
+
+<view  class="cover" style="{{ display ? '': 'display: none;' }}" bindtouchmove="onTouchmove">
+    <view class="cover-bg" bindtap="close" bindanimationend="onAnimationend" style="animation-name: {{ animationBg }};animation-duration: {{duration}}ms;"></view>
+    <view class="cover-content {{ position }}" bindanimationend="onAnimationend" style="animation-name: {{ animationCover }};animation-duration: {{duration}}ms;">
+      <slot name="content"></slot>
+    </view>
+  </view>

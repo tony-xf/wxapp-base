@@ -1,0 +1,27 @@
+<Popups id="payType" position="enter">
+    <view slot="content" class="pay-list">
+        <view class="content" hover-class="none" hover-stop-propagation="false">
+            <view class="header hairline--bottom" hover-class="none" hover-stop-propagation="false">
+                支付方式
+            </view>
+            <view class="main" hover-class="none" hover-stop-propagation="false">
+                <view class="list" hover-class="none" hover-stop-propagation="false">
+                    <radio-group bindchange="radioChange">
+                        <label class="payment-li hairline--bottom" hover-class="none" hover-stop-propagation="false" wx:for="{{paymentMode}}" wx:key="{{item.payPlatformMode}}">
+                            <view class="channel_logo hairline--surround" hover-class="none" hover-stop-propagation="false">
+                                <image src="{{tools.fullImgUrl(item.logo)}}"></image>
+                            </view>
+                            <text class="channel-name" selectable="false" space="false" decode="false">{{item.channelName}}</text>
+                            <radio class="" value="{{item.payPlatformMode}}" checked="{{currentPaymentMode.payPlatformMode == item.payPlatformMode}}" color="#228E1B"></radio>
+                        </label>
+                    </radio-group>
+                </view>
+            </view>
+            <view class="footer" hover-class="none" hover-stop-propagation="false" catchtap="confirm">
+                确认
+            </view>
+        </view>
+    </view>
+</Popups>
+
+<wxs src="../../wxs/index.wxs" module="tools" />

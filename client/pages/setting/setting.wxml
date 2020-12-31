@@ -1,0 +1,17 @@
+    <view class="setting">
+      <text class="title">应用信息</text>
+      <text class="tips">Tips：如果遇到非业务域名无法打开或者无法获取数据的提示，请在右上角打开调试模式。</text>
+      <text class="text-app-info" selectable="{{true}}">{{appInfo}}</text>
+      <text class="title">API环境切换</text>
+      <radio-group bindchange="envChange" class="radio-group-env">
+          <label class="radio-env" wx:for="{{envs}}">
+                  <radio checked="{{env===item.value}}" value="{{item.value}}"></radio>
+            {{item.name}}
+          </label>
+      </radio-group>
+      <button bindtap="bindTapEnv" class="button" type="primary">提交环境配置</button>
+      <!-- <button bindtap="bindTapEnv" class="button" type="primary">提交环境配置</button>
+      <text class="title">H5跳转</text>
+      <textarea @input="bindinput" class="input-h5" placeholder="请输入H5地址"></textarea>
+      <button @tap="bindTapJumpH5" class="button" type="primary">跳转H5</button> -->
+    </view>

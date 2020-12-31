@@ -1,0 +1,67 @@
+@keyframes fade-enter {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-leave {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes bottom-enter {
+  from {
+    transform: translate3d(0, 100%, 0); }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes bottom-leave {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(0, 100%, 0); } }
+
+@keyframes center-enter {
+  from {
+    transform: scale(0.5); }
+  to {
+    transform: scale(1.5); } }
+
+@keyframes center-leave {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(0.6); } }
+
+.cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; }
+
+.cover-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-timing-function: ease;
+  animation-fill-mode: both; }
+
+.cover-content {
+  position: absolute;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  /*padding-bottom: var(--safe-area-inset-bottom);*/ }
+  .cover-content.bottom {
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .cover-content.center {
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0); }

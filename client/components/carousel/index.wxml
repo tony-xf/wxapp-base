@@ -1,0 +1,25 @@
+<view class="carousel">
+    <swiper
+        autoplay="{{autoplay}}"
+        bindanimationfinish="handleAnimationFinish"
+        bindchange="handleChange"
+        bindtransition="handleTransition"
+        circular="{{circular}}"
+        current="{{current}}"
+        duration="{{duration}}"
+        indicator-dots="{{dots}}"
+        indicator-color="{{dotsColor}}"
+        indicator-active-color="{{dotsActiveColor}}"
+        interval="4000"
+        list="{{list.length}}"
+        style="height: {{height}}rpx;">
+        <view class="inner">
+             <swiper-item wx:if="{{video}}">
+                 <video id="video" style="width:100%;height:100%" src="{{video}}"></video>
+            </swiper-item>
+            <swiper-item wx:for="{{list}}" wx:key="{{index}}">
+                <image lazyLoad bindtap="handleTap" data-index="{{index}}" mode="aspectFill" src="{{item.url ? item.url : errorImg}}" binderror="handleErr"></image>
+            </swiper-item>
+        </view>
+    </swiper>
+</view>

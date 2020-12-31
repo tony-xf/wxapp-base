@@ -1,0 +1,42 @@
+.apply-complete{
+    font-size: 28rpx;
+    .msg-block{
+        width: 420rpx;
+        margin: 150rpx auto 20rpx;
+        text-align: center;
+        image{
+            width: 100rpx;
+            height: 100rpx;
+        }
+        .msg{
+            font-size: 32rpx;
+            font-weight: bold;
+            color: #C9B582;
+            margin: 24rpx 0 36rpx;
+        }
+    }
+    .btn-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .full-btn{
+            display: flex;
+            width: 540rpx;
+            height: 80rpx;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background-color: #C9B582;
+            box-sizing: border-box;
+            border-color: #C9B582;
+            border-radius: 80rpx;
+            margin: 56rpx auto 30rpx;
+        }
+        .border-btn{
+            width: 540rpx;
+            text-align: center;
+            margin: auto;
+            color: #C9B582;
+        }
+    }
+}

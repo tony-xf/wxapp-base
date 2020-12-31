@@ -1,0 +1,59 @@
+.goods-item{
+  width: 328rpx;
+  padding: 24rpx;
+  background: #fff;
+  .img-box{
+    position: relative;
+  }
+  .img{
+    width: 280rpx;
+    height: 280rpx;
+    border: 1px solid #e5e5e5;
+  }
+  .name{
+    width: 280rpx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 14rpx 0;
+  }
+  .tag-list{
+    display: flex;
+    overflow: auto;
+    margin-bottom: 16rpx;
+    .tag{
+      flex-shrink: 0;
+      height: 40rpx;
+      line-height: 40rpx;
+      color: #9f9f9f;
+      background: #eee;
+      padding: 0 14rpx;
+      border-radius: 20rpx;
+      font-size: 24rpx;
+      margin-right: 16rpx;
+    }
+  }
+  .tool{
+    display: flex;
+    align-items: center;
+    font-size: 24rpx;
+    color: #a6a6a6;
+    padding-top: 18rpx;
+    border-top: 1px solid #ddd;
+    .item{
+      display: flex;
+      align-items: center;
+      border-right: 1px solid #a6a6a6;
+      padding: 0 16rpx;
+      van-icon{
+        margin-right: 6rpx;
+      }
+      &:last-child{
+        border: none;
+      }
+      &:first-child{
+        padding-left: 0;
+      }
+    }
+  }
+}

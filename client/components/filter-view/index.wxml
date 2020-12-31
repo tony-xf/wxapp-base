@@ -1,0 +1,27 @@
+<view class="filter-view-bg" wx:if="{{visible}}" bindtap="close" >
+    <view class="fliter" catchtap="tapFilter">
+        <view class="filter-top">
+            <view class="filter-top-vertical-line"></view>
+            <view class="filter-top-text">筛选</view>
+        </view>
+        <slot name="before"></slot>
+        <view class="filter-group" wx:for="{{list}}" wx:key="id">
+            <view class="filter-group-name">{{item.label}}</view>
+            <view class="filter-group-operate" wx:if="{{item.attribute.length>3}}" bindtap="switchIsAll" data-id="{{item.id}}">
+                <text>全部</text>
+                <van-icon style="transform:{{item.isAll?'rotate(180deg)':''}}" name="arrow-down"></van-icon>
+                <!--<image style="transform:{{item.isAll?'rotate(180deg)':''}}" class="filter-group-icon" src="/images/search-result/all.png"/>-->
+            </view>
+            <view class="filter-choose-label-content" style="height:{{item.isAll?'':'70rpx'}};overflow:{{item.isAll?'':'hidden'}}">
+                <view class="filter-choose-label {{label.chooseStatus?'label-choosing':''}}" wx:for="{{item.attribute}}" wx:key="id" wx:for-item="label" bindtap="labelChoose" data-groupid="{{item.id}}" data-id="{{label.id}}">{{label.name}}</view>
+            </view>
+        </view>
+        <slot name="after"></slot>
+        <view class="filter-group-bottom"></view>
+        <view class="filter-bottom">
+            <view class="result-count">共 {{total}} 个结果</view>
+            <view class="reset" bindtap="reset">重置</view>
+            <view class="confirm" bindtap="search">确认</view>
+        </view>
+    </view>
+</view>
