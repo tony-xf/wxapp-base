@@ -126,9 +126,6 @@ function userIdGenerator() {
     loadSync() {
       const User = wx.getStorageSync('USER') || {}
       User && (this.data = User)
-
-      // let currentTime = Date.now() / 1000 + 36e2
-      // User.expire_time > currentTime ? (this.data = User) : (this.removeSync())
     }
     removeSync() {
       try {

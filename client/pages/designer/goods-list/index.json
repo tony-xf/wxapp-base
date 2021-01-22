@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "作品管理",
-  "usingComponents": {
-    "dialog": "../../../../components/dialog/index",
-    "xcx-image":"../../../components/xcx-image/xcx-image",
-    "filter-view":"../../../components/filter-view/index",
-    "goods-item":"../components/goods-item/index"
-  }
-}

@@ -1,1 +1,0 @@
-export const domain = 'http://img.dev.jentian.com/'

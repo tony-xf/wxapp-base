@@ -1,10 +1,8 @@
 import utils from './utils/index.js'
-import loginServices from './api/login.js'
 import Constants from './config/index.js'
 import Event from './libs/event.js'
 import hosts from './common/services/hosts.js'
 import mapKeyToImgUrl from './common/services/mapKeyToImgUrl.js'
-import img from './common/services/mapKeyToImageUrl.js'
 import User from './global/user.js'
 
 /**
@@ -68,7 +66,6 @@ App({
     Util: utils.util,
     KeyToUrl: mapKeyToImgUrl,
     User,
-    Img:img
   },
   isDebug: Constants.APP_DEBUG,
   onLaunch() {

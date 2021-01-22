@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "审核结果",
-  "usingComponents": {
-    "van-icon": "@vant/weapp/icon/index"
-  }
-}

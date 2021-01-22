@@ -14,15 +14,13 @@ beta = "beta",
 dev = "dev",
 prodHosts = {
     API_HOST: "http://jha.lrz.dev.jentian.com/applet/",
+    STATIC_HOST: "http://jha.lrz.dev.jentian.com/applet/",
     DESIGNER_HOST: "http://jha.lrz.dev.jentian.com/designer/",
-    HOST: "https://m.baoyuyoujia.com/",
-    MEMBER_HOST: 'https://wx9b33e8e31047ea37.baoyuyoujia.com/'
 },
 devHosts = {
     API_HOST: "http://jha.sjj.dev.jentian.com/applet/",
     DESIGNER_HOST: "http://jha.lrz.dev.jentian.com/designer/",
-    HOST: "http://jade-mall-wap.lrz.develop.csmall.com",
-    MEMBER_HOST: 'http://wx3260515a4514ec94.member-c.try.csmall.com/'
+    STATIC_HOST: "http://jha.lrz.dev.jentian.com/applet/",
 },
 defaultEnv = prod, 
 ENV = defaultEnv; 

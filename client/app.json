@@ -2,20 +2,8 @@
 	"pages": [
 		"pages/home/index",
 		"pages/ucenter/login/index",
-		"pages/designer/goods-detail/index",
-		"pages/designer/goods-list/index",
-		"pages/designer/index/index",
-		"pages/designer/custom/index",
-		"pages/designer/custom-detail/index",
-		"pages/designer/apply/index",
-		"pages/designer/apply-complete/index",
-		"pages/designer/entry/index",
-		"pages/designer/center/index",
-		"pages/designer/list/index",
-		"pages/designer/work-upload/index",
-		"pages/designer/comment-list/index",
-		"pages/designer/message/index",
-		"pages/designer/detail/index"
+		"pages/test/index",
+		"pages/setting/index"
 	],
 	"tabBar": {
 		"list": [
@@ -26,8 +14,8 @@
 				"selectedIconPath": "images/tabBar/home_active.png"
 			},
 			{
-				"pagePath": "pages/designer/center/index",
-				"text": "我的",
+				"pagePath": "pages/test/index",
+				"text": "测试",
 				"iconPath": "images/tabBar/profile.png",
 				"selectedIconPath": "images/tabBar/profile_active.png"
 			}
@@ -44,7 +32,7 @@
 	"window": {
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "金海岸",
+		"navigationBarTitleText": "基础工程",
 		"navigationBarTextStyle": "black"
 	},
 	"sitemapLocation": "sitemap.json",

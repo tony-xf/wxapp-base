@@ -15,12 +15,6 @@ Page({
    * 页面加载
    */
   onLoad(options) {
-    if(app.type==='designer') {
-      this.fromDesigner = true
-    }
-    // if(this.getPages().route.indexOf('pages/designer')>-1&&this.getPages().route!='pages/designer/list/index'){
-    //   this.fromDesigner = true
-    // }
 	  this.successUrl = options.successUrl && decodeURIComponent(options.successUrl)
 	  this._wxLogin()
   },

@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "设计师",
-  "usingComponents": {
-    "van-uploader": "@vant/weapp/uploader/index",
-    "van-icon": "@vant/weapp/icon/index"
-  }
-}

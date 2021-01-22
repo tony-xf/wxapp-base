@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "设计师",
-  "usingComponents": {
-    "xcx-image":"../../../components/xcx-image/xcx-image",
-    "goods-item":"../components/goods-item/index"
-  }
-}

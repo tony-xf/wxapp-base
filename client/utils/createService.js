@@ -33,7 +33,6 @@ const createService = function(obj){
           _v.pathName = _v.name.replace(reg, option.params[v])
         })
       let token = wx.getStorageSync('token')
-      console.log(_o)
       _o.header['Cookie'] = token ? 'sid='+token: '';
       _o.header['access-token'] = token || ''
       return new Promise((resolve, reject)=>{

@@ -1,1 +1,0 @@
-export const tmplIds = 'FH-k8uFswiIuSvPFkZwazq02JyRoKW8IZjCRWvVOsRc'

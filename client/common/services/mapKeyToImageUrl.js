@@ -1,6 +1,6 @@
 
-import {domain} from 'imgConst.js'
-
+import Hosts from 'hosts.js'
+const domain = Hosts.getApiHost().STATIC_HOST
 for (var map = {
     address: 'order/comment/2020-12/5b6a5f0169fca.png',
     news: 'order/comment/2020-12/5b6a5f33b34c6.png',
